@@ -134,12 +134,13 @@
             </include>
 
             <!-- Unpause the physics in Gazebo and home the robot -->
-            <node name="home_the_arm" pkg="kortex_gazebo" type="home_robot.py" output="log" respawn="false" />
+            <!-- node name="home_the_arm" pkg="kortex_gazebo" type="home_robot.py" output="log" respawn="false" / -->
 
         </group>
 
         <!-- Start RViz -->
         <node name="rviz" pkg="rviz" type="rviz" if="$(arg start_rviz)"/> 
+        <node name="rqt" pkg="rqt" type="rqt" if="$(arg start_rviz)"/> 
     
     </group>
 
